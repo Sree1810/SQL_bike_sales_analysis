@@ -43,47 +43,47 @@ This dataset contains detailed sales data for bike-related products across multi
 - **Database Creation**: The project starts by creating a database named `bike_sales`.
 - **Table Creation**: A table named `bike_sales` is created to store the sales data. The table structure includes columns describing the sales data of bikes in various regions.
 
-```sql
--- Create Database
-CREATE DATABASE bike_sales;
-
--- Use Database
-USE bike_sales;
-
--- Create Table for the Dataset
-CREATE TABLE bike_sales (
-    Date DATE,
-    Day INT,
-    Month VARCHAR(20),
-    Year INT,
-    Customer_Age INT,
-    Age_Group VARCHAR(50),
-    Customer_Gender CHAR(1),
-    Country VARCHAR(50),
-    State VARCHAR(50),
-    Product_Category VARCHAR(50),
-    Sub_Category VARCHAR(50),
-    Product VARCHAR(100),
-    Order_Quantity INT,
-    Unit_Cost DECIMAL(10, 2),
-    Unit_Price DECIMAL(10, 2),
-    Profit DECIMAL(10, 2),
-    Cost DECIMAL(10, 2),
-    Revenue DECIMAL(10, 2)
-);
-```
+    ```sql
+    -- Create Database
+    CREATE DATABASE bike_sales;
+    
+    -- Use Database
+    USE bike_sales;
+    
+    -- Create Table for the Dataset
+    CREATE TABLE bike_sales (
+        Date DATE,
+        Day INT,
+        Month VARCHAR(20),
+        Year INT,
+        Customer_Age INT,
+        Age_Group VARCHAR(50),
+        Customer_Gender CHAR(1),
+        Country VARCHAR(50),
+        State VARCHAR(50),
+        Product_Category VARCHAR(50),
+        Sub_Category VARCHAR(50),
+        Product VARCHAR(100),
+        Order_Quantity INT,
+        Unit_Cost DECIMAL(10, 2),
+        Unit_Price DECIMAL(10, 2),
+        Profit DECIMAL(10, 2),
+        Cost DECIMAL(10, 2),
+        Revenue DECIMAL(10, 2)
+    );
+    ```
 - After creating the table import the dataset directly into the SQL using import wizard.
 
 ### 2. Data Exploration & Cleaning
 
 - To view all the record from the table and understand the columns and their attributes.
-```sql
--- To view all the records inserted
-select * from bike_sales
-
--- To verify the data types of the dataset
-DESCRIBE bike_sales;
-```
+    ```sql
+    -- To view all the records inserted
+    select * from bike_sales
+    
+    -- To verify the data types of the dataset
+    DESCRIBE bike_sales;
+    ```
 - Data Cleaning
   1. Handling Missing Values
      ```sql
@@ -126,8 +126,7 @@ DESCRIBE bike_sales;
      ```
 
 - Data Exploration
-    1. Summary Statistics
-       - Generate key metrics such as total sales, profit, and revenue across various dimensions:
+    1. Summary Statistics: Generate key metrics such as total sales, profit, and revenue across various dimensions
        ```sql
         SELECT year, country, product_category, 
         SUM(order_quantity) AS total_sales, 
@@ -137,14 +136,14 @@ DESCRIBE bike_sales;
         GROUP BY year, country, product_category
         order by year;
         ```
-    2. Yearly Trends
+    2. Yearly Trends: Analyze the yearly distribution of revenue and profit
         ```sql
        SELECT year, SUM(revenue) AS total_revenue, SUM(profit) AS total_profit
         FROM bike_sales
         GROUP BY year
         ORDER BY total_revenue DESC;
         ```
-    4. Demographic Analysis
+    3. Demographic Analysis: Examine sales by age group and customer gender
        ```sql
         SELECT age_group, customer_gender, 
         SUM(order_quantity) AS total_sales, 
@@ -154,7 +153,7 @@ DESCRIBE bike_sales;
         GROUP BY age_group, customer_gender
         order by total_revenue desc;
        ```
-    5. Geographic Analysis
+    4. Geographic Analysis: Explore sales performance by country and state
        ```sql
         SELECT country, state, 
         SUM(order_quantity) AS total_sales, 
@@ -164,7 +163,7 @@ DESCRIBE bike_sales;
         GROUP BY country, state
         ORDER BY total_sales DESC;
        ```
-    6. Product Performance
+    5. Product Performance: Analyze sales at the product category and sub-category levels
        ```sql
         SELECT product_category, sub_category, 
         SUM(order_quantity) AS total_sales, 
