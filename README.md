@@ -42,4 +42,31 @@ This dataset contains detailed sales data for bike-related products across multi
 
 - **Database Creation**: The project starts by creating a database named `bike_sales`.
 - **Table Creation**: A table named `bike_sales` is created to store the sales data. The table structure includes columns describing the sales data of bikes in various regions.
-- 
+
+```sql
+
+CREATE DATABASE bike_sales;
+
+USE bike_sales;
+
+CREATE TABLE bike_sales (
+    Date DATE,
+    Day INT,
+    Month VARCHAR(20),
+    Year INT,
+    Customer_Age INT,
+    Age_Group VARCHAR(50),
+    Customer_Gender CHAR(1),
+    Country VARCHAR(50),
+    State VARCHAR(50),
+    Product_Category VARCHAR(50),
+    Sub_Category VARCHAR(50),
+    Product VARCHAR(100),
+    Order_Quantity INT,
+    Unit_Cost DECIMAL(10, 2),
+    Unit_Price DECIMAL(10, 2),
+    Profit DECIMAL(10, 2),
+    Cost DECIMAL(10, 2),
+    Revenue DECIMAL(10, 2)
+);
+```
