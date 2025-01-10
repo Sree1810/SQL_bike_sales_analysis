@@ -127,7 +127,7 @@ DESCRIBE bike_sales;
 
   - Data Exploration
     1. Summary Statistics
-- Generate key metrics such as total sales, profit, and revenue across various dimensions:
+       -Generate key metrics such as total sales, profit, and revenue across various dimensions:
        ```sql
         SELECT year, country, product_category, 
         SUM(order_quantity) AS total_sales, 
@@ -137,7 +137,7 @@ DESCRIBE bike_sales;
         GROUP BY year, country, product_category
         order by year;
         ```
-    3. Yearly Trends
+    2. Yearly Trends
         ```sql
        SELECT year, SUM(revenue) AS total_revenue, SUM(profit) AS total_profit
         FROM bike_sales
