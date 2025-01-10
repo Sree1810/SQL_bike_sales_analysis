@@ -1,1 +1,1 @@
-# SQL_bike_sales_analysis
+# Bike Sales Analysis SQL Project
