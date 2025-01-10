@@ -19,9 +19,9 @@ This dataset contains detailed sales data for bike-related products across multi
 - **Number of Rows:** 7
 - **Number of Columns:** 113036
 - **Columns Description**
-    **Date**: The date of the transaction (format: DD-MM-YY).
-    **Day**: The day of the transaction.
-    **Month**: The month of the transaction.
+    1.**Date**: The date of the transaction (format: DD-MM-YY).
+    2.**Day**: The day of the transaction.
+    3.**Month**: The month of the transaction.
     **Year**: The year of the transaction.
     **Customer_Age**: Age of the customer.
     **Age_Group**: Age group category of the customer.
