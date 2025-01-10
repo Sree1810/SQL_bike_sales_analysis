@@ -125,9 +125,9 @@ DESCRIBE bike_sales;
         SET product_category = TRIM(product_category);
      ```
 
-  - Data Exploration
+- Data Exploration
     1. Summary Statistics
-       -Generate key metrics such as total sales, profit, and revenue across various dimensions:
+       - Generate key metrics such as total sales, profit, and revenue across various dimensions:
        ```sql
         SELECT year, country, product_category, 
         SUM(order_quantity) AS total_sales, 
