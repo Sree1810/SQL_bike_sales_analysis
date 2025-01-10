@@ -1,15 +1,15 @@
 -- ============================================================================
 
 -- Create Database
-CREATE DATABASE BikeSales;
+CREATE DATABASE bike_sales;
 
 -- Use Database
-USE BikeSales;
+USE bike_sales;
 
 -- ============================================================================
 
 -- Create Table for the Dataset
-CREATE TABLE BikeSalesData (
+CREATE TABLE bike_sales (
     Date DATE,
     Day INT,
     Month VARCHAR(20),
