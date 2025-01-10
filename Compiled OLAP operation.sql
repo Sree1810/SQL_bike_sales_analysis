@@ -1,4 +1,38 @@
 -- ============================================================================
+
+-- Create Database
+CREATE DATABASE BikeSales;
+
+-- Use Database
+USE BikeSales;
+
+-- ============================================================================
+
+-- Create Table for the Dataset
+CREATE TABLE BikeSalesData (
+    Date DATE,
+    Day INT,
+    Month VARCHAR(20),
+    Year INT,
+    Customer_Age INT,
+    Age_Group VARCHAR(50),
+    Customer_Gender CHAR(1),
+    Country VARCHAR(50),
+    State VARCHAR(50),
+    Product_Category VARCHAR(50),
+    Sub_Category VARCHAR(50),
+    Product VARCHAR(100),
+    Order_Quantity INT,
+    Unit_Cost DECIMAL(10, 2),
+    Unit_Price DECIMAL(10, 2),
+    Profit DECIMAL(10, 2),
+    Cost DECIMAL(10, 2),
+    Revenue DECIMAL(10, 2)
+);
+
+-- Import the CSV file to insert the data into the table.
+-- ============================================================================
+
 -- To See NULL values in the dataset 
 select * from bike_sales
 where id IS NULL or date IS NULL or day IS NULL or month IS NULL 
