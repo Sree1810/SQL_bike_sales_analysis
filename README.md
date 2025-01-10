@@ -77,6 +77,7 @@ This dataset contains detailed sales data for bike-related products across multi
 ### 2. Data Exploration & Cleaning
 
 - To view all the record from the table and understand the columns and their attributes.
+  
     ```sql
     -- To view all the records inserted
     select * from bike_sales
@@ -84,8 +85,10 @@ This dataset contains detailed sales data for bike-related products across multi
     -- To verify the data types of the dataset
     DESCRIBE bike_sales;
     ```
+    
 - Data Cleaning
   1. Handling Missing Values
+
      ```sql
          -- To See NULL values in the dataset 
         select * from bike_sales
@@ -107,7 +110,9 @@ This dataset contains detailed sales data for bike-related products across multi
         or unit_cost IS NULL or unit_price IS NULL or profit IS NULL
         or cost IS NULL or revenue IS NULL;
         ```
+     
   2. Removing Unnecessary Whitespace
+
      ```sql
         -- check whitespaces in the column
         SELECT * FROM bike_sales
@@ -127,6 +132,7 @@ This dataset contains detailed sales data for bike-related products across multi
 
 - Data Exploration
     1. Summary Statistics: Generate key metrics such as total sales, profit, and revenue across various dimensions
+
        ```sql
         SELECT year, country, product_category, 
         SUM(order_quantity) AS total_sales, 
@@ -136,14 +142,18 @@ This dataset contains detailed sales data for bike-related products across multi
         GROUP BY year, country, product_category
         order by year;
         ```
+       
     2. Yearly Trends: Analyze the yearly distribution of revenue and profit
-        ```sql
+
+       ```sql
        SELECT year, SUM(revenue) AS total_revenue, SUM(profit) AS total_profit
         FROM bike_sales
         GROUP BY year
         ORDER BY total_revenue DESC;
         ```
+       
     3. Demographic Analysis: Examine sales by age group and customer gender
+
        ```sql
         SELECT age_group, customer_gender, 
         SUM(order_quantity) AS total_sales, 
@@ -153,7 +163,8 @@ This dataset contains detailed sales data for bike-related products across multi
         GROUP BY age_group, customer_gender
         order by total_revenue desc;
        ```
-    4. Geographic Analysis: Explore sales performance by country and state
+    4. Geographic Analysis: Explore sales performance by country and state 
+
        ```sql
         SELECT country, state, 
         SUM(order_quantity) AS total_sales, 
@@ -163,7 +174,9 @@ This dataset contains detailed sales data for bike-related products across multi
         GROUP BY country, state
         ORDER BY total_sales DESC;
        ```
+       
     5. Product Performance: Analyze sales at the product category and sub-category levels
+
        ```sql
         SELECT product_category, sub_category, 
         SUM(order_quantity) AS total_sales, 
