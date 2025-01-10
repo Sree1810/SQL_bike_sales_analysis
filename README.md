@@ -16,27 +16,27 @@ This dataset contains detailed sales data for bike-related products across multi
 ## Project Structure
 
 ### 1. Dataset Description
-- **Number of Rows:** 7
-- **Number of Columns:** 113036
+- **Number of Columns:** 18
+- **Number of Rows:** 113036
 - **Columns Description**
     1. **Date**: The date of the transaction (format: DD-MM-YY).
     2. **Day**: The day of the transaction.
     3.**Month**: The month of the transaction.
-    **Year**: The year of the transaction.
-    **Customer_Age**: Age of the customer.
-    **Age_Group**: Age group category of the customer.
-    **Customer_Gender**: Gender of the customer (M for Male, F for Female).
-    **Country**: The country where the transaction occurred.
-    **State**: The state where the transaction occurred.
-    **Product_Category**: Broad category of the product.
-    **Sub_Category**: Specific sub-category of the product.
-    **Product**: Name of the product sold.
-    **Order_Quantity**: Number of units sold.
-    **Unit_Cost**: Cost per unit of the product.
-    **Unit_Price**: Selling price per unit of the product.
-    **Profit**: Profit generated from the sale (calculated as Revenue - Cost).
-    **Cost**: Total cost for the order (calculated as Order_Quantity * Unit_Cost).
-    **Revenue**: Total revenue generated (calculated as Order_Quantity * Unit_Price).
+    4. **Year**: The year of the transaction.
+    5. **Customer_Age**: Age of the customer.
+    6. **Age_Group**: Age group category of the customer.
+    7. **Customer_Gender**: Gender of the customer (M for Male, F for Female).
+    8. **Country**: The country where the transaction occurred.
+    9. **State**: The state where the transaction occurred.
+    10. **Product_Category**: Broad category of the product.
+    11. **Sub_Category**: Specific sub-category of the product.
+    12. **Product**: Name of the product sold.
+    13. **Order_Quantity**: Number of units sold.
+    14. **Unit_Cost**: Cost per unit of the product.
+    15. **Unit_Price**: Selling price per unit of the product.
+    16. **Profit**: Profit generated from the sale (calculated as Revenue - Cost).
+    17. **Cost**: Total cost for the order (calculated as Order_Quantity * Unit_Cost).
+    18. **Revenue**: Total revenue generated (calculated as Order_Quantity * Unit_Price).
       
 ### 2. Database Setup
 
