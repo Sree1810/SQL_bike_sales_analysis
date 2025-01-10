@@ -330,56 +330,56 @@ The following SQL queries were developed to answer specific business questions:
     ORDER BY total_profit desc;
     ```
 
-### 4. Use Cases
+## Use Cases
 This dataset can be used for:
-
-Sales Trend Analysis: Identifying patterns over time based on sales data.
-Customer Demographics Insights: Understanding customer behavior by age, gender, and region.
-Profitability Analysis: Evaluating the cost, revenue, and profit margins of products.
+- Sales Trend Analysis: Identifying patterns over time based on sales data.
+- Customer Demographics Insights: Understanding customer behavior by age, gender, and region.
+- Profitability Analysis: Evaluating the cost, revenue, and profit margins of products.
      
-### 5. Findings
-#### Data Quality Insights
+## Findings
+### 1. Data Quality Insights
 
-Several rows contained NULL values across critical columns such as date, customer_age, and revenue. These rows were identified and removed to ensure data completeness.
-Leading and trailing whitespace was found in text fields such as product_category and country. These were cleaned to maintain consistency and avoid duplication in grouping operations.
+- Several rows contained NULL values across critical columns such as date, customer_age, and revenue. These rows were identified and removed to ensure data completeness.
+- Leading and trailing whitespace was found in text fields such as product_category and country. These were cleaned to maintain consistency and avoid duplication in grouping operations.
 
-#### Yearly Trends
+### 2. Yearly Trends
 
-The analysis revealed significant growth in revenue and profit over the years, with certain years performing exceptionally well.
-Years with lower revenue often corresponded to reduced sales volumes, highlighting the correlation between order quantity and overall revenue generation.
+- The analysis revealed significant growth in revenue and profit over the years, with certain years performing exceptionally well.
+- Years with lower revenue often corresponded to reduced sales volumes, highlighting the correlation between order quantity and overall revenue generation.
 
-#### Geographic Performance
+### 3. Geographic Performance
 
-Top-performing Countries: The highest revenue was observed in countries with larger customer bases and economic activity, such as Canada and the USA.
-State-wise Analysis: Certain states outperformed others in terms of both sales volume and revenue, often driven by high demand for specific product categories.
+- Top-performing Countries: The highest revenue was observed in countries with larger customer bases and economic activity, such as Canada and the USA.
+- State-wise Analysis: Certain states outperformed others in terms of both sales volume and revenue, often driven by high demand for specific product categories.
 
-#### Demographic Trends
+### 4. Demographic Trends
 
-The age group "Adults (35-64)" contributed the most to total sales and revenue, followed by "Youth (<25)".
-Male customers exhibited higher purchase volumes compared to female customers, particularly in regions like Canada and the USA.
+- The age group "Adults (35-64)" contributed the most to total sales and revenue, followed by "Youth (<25)".
+- Male customers exhibited higher purchase volumes compared to female customers, particularly in regions like Canada and the USA.
 
-#### Product Performance
+### 5. Product Performance
 
-The "Accessories" category recorded the highest sales, with sub-categories such as "Helmets" and "Lights" being the most popular.
-Premium products like bikes showed consistent profitability despite having lower sales volumes compared to accessories.
+- The "Accessories" category recorded the highest sales, with sub-categories such as "Helmets" and "Lights" being the most popular.
+- Premium products like bikes showed consistent profitability despite having lower sales volumes compared to accessories.
 
-#### Profitability
+### 6. Profitability
 
-Products with higher unit costs but premium pricing, such as high-end bikes, had the best profit margins.
-Accessories contributed significantly to overall revenue but had lower profit margins compared to other categories.
+- Products with higher unit costs but premium pricing, such as high-end bikes, had the best profit margins.
+- Accessories contributed significantly to overall revenue but had lower profit margins compared to other categories.
 
-### Conclusion
-The data cleaning and exploration process of the bike_sales table provided valuable insights into sales performance, customer demographics, and product trends. Key takeaways include:
+## Conclusion
+- The data cleaning and exploration process of the bike_sales table provided valuable insights into sales performance, customer demographics, and product trends. 
+- Key takeaways include:
 
-Data Readiness: After cleaning, the dataset was free of inconsistencies, enabling accurate analysis and decision-making.
-Year-over-Year Growth: Positive revenue and profit trends indicate strong business growth, likely driven by effective marketing and product diversification.
-Target Market Insights:
+    1. Data Readiness: After cleaning, the dataset was free of inconsistencies, enabling accurate analysis and decision-making.
+    2. Year-over-Year Growth: Positive revenue and profit trends indicate strong business growth, likely driven by effective marketing and product diversification.
+    3. Target Market Insights:
 The "Adults (35-64)" age group should remain the primary target audience for marketing campaigns.
 Regional marketing strategies should focus on high-performing states and countries.
-Product Strategy:
+    4. Product Strategy:
 Continued investment in high-margin products like premium bikes is recommended.
 Efforts to improve the profitability of accessories, through either cost reduction or premium pricing, could significantly boost overall profits.
-Future Actions:
+    5. Future Actions:
 Expand marketing efforts in top-performing regions while exploring opportunities in underperforming areas.
 Introduce new products tailored to the preferences of high-contributing demographic segments.
 By leveraging these findings, the company can make data-driven decisions to enhance operational efficiency, optimize sales strategies, and maximize profitability.
